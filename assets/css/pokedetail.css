@@ -1,0 +1,166 @@
+/* Estilização geral */
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Container de informações */
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.info img {
+  max-width: 80%;
+  height: 200px;
+  margin: 1rem 0;
+}
+
+.info i {
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+#previous {
+  left: 10%;
+}
+
+#next {
+  right: 10%;
+}
+
+.info .type {
+  margin: 0 0.5rem;
+}
+
+/* Estilo para a seção "about" */
+.about {
+  background-color: white;
+  height: fit-content;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px -2px rgba(34, 34, 34, 0.4);
+  width: 90%;
+}
+
+.about .title {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+}
+
+/* Estilo para modal */
+.modal {
+  text-transform: uppercase;
+  padding: 20px;
+  max-width: 100%;
+  border-radius: inherit;
+}
+
+.modal .number,
+.modal .name {
+  font-size: 1rem;
+  cursor: default;
+}
+
+.modal .name {
+  text-transform: capitalize;
+}
+
+/* Linha separadora */
+.info hr {
+  width: 80%;
+  margin: 0.7rem auto;
+  background-color: #000;
+}
+
+/* Lista sem marcadores */
+ul {
+  padding: 0;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+/* Estatísticas */
+.stats-container .stats {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.stats-container .stats p {
+  min-width: 30px;
+}
+
+.stats-container .progress-bar {
+  width: 100%;
+  height: 1rem;
+  background-color: #dddddd;
+  border-radius: 6px;
+  position: relative;
+}
+
+.stats-container .progress-bar .progress {
+  height: 100%;
+  border-radius: 6px;
+  position: absolute;
+}
+
+.stats-container .stats :first-child {
+  flex: 1;
+}
+
+.stats-container .stats :nth-child(2) {
+  flex: 1;
+}
+
+.stats-container .stats :nth-child(3) {
+  flex: 9;
+}
+
+/* Sobreposição de fundo */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Melhor uso de opacidade no RGBA */
+  z-index: 1;
+}
+
+/* Detalhes do Pokémon */
+.pokemonDetail {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  border-radius: 1rem;
+  z-index: 1000;
+  width: 500px;
+  max-width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.detailOrganizer {
+  transition: all 0.3s ease-in-out; /* Ajuste no tempo de transição */
+}
+
+/* Modais específicos */
+.modal > span {
+  cursor: pointer;
+}
